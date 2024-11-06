@@ -43,6 +43,7 @@ def find_user(email: str) -> User | None:
         return User(display_name="Jerry", email=email, password="123")
     if email == "spike@dog.com":
         return User(display_name="Spike", email=email, password="123")
+    return None
 
 
 def display_user_history(user_history: list[str]):
