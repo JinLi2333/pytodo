@@ -22,7 +22,6 @@ class User:
             print("you are already logged in")
 
     def login(self):
-        password = ""
         for _ in range(RETRY_TIME):
             password = input("type your password and press ENTER\n")
             if password == self.password:
