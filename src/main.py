@@ -8,6 +8,7 @@ def main():
     while user is None:
         user = select_user(user_history)
     print(f"select user {user.display_name}")
+    user.check_credential()
 
 
 def load_user_history() -> list[str]:
@@ -21,7 +22,11 @@ def select_user(user_history: list[str]) -> User | None:
     display_user_history(user_history)
     while True:
         try:
-            selection = int(input(f"type a number between 1 and {len(user_history)} and press ENTER to select a user\n"))
+            selection = int(
+                input(
+                    f"type a number between 1 and {len(user_history)} and press ENTER to select a user\n"
+                )
+            )
             if selection < 1 or selection > len(user_history):
                 raise ValueError
             break
@@ -43,10 +48,6 @@ def find_user(email: str) -> User | None:
 def display_user_history(user_history: list[str]):
     for i, uh in enumerate(user_history):
         print(f"{i + 1}. {uh}")
-
-
-def login() -> User | None:
-    return None
 
 
 def select_list(user: User):
