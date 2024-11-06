@@ -1,0 +1,9 @@
+{
+    "exclude": [
+        "src"
+    ],
+    "typeCheckingMode": "strict",
+    "reportUnknownArgumentType": "error",
+    "reportUnknownParameterType": "error",
+    "reportUntypedFunctionDecorator": "error",
+}
