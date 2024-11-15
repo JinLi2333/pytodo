@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools", "wheel"]  # Dependencies required to build the project
+build-backend = "setuptools.build_meta"  # The backend used for building the project
+
+[tool.poetry]
+name = "pytodo"  # Name of the project
+version = "0.1.0"  # Version of the project
+description = "a cli todo project"
+authors = ["Jin Li"]
+packages = [{include = "src"}]
+readme = "README.md"  # Path to README file
+keywords = ["example", "tutorial", "cli"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.12, <3.13"
+typer = "0.13.0"
+rich = "13.9.4"
+tinydb = "4.8.2"
+
+[tool.poetry.group.test]
+[tool.poetry.group.test.dependencies]
+pytest="8.3.3"
+
+
