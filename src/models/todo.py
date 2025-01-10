@@ -1,5 +1,5 @@
 from datetime import datetime
-from todo_step import TodoStep
+from models.todo_step import TodoStep
 
 from enum import Enum, auto
 
@@ -20,7 +20,7 @@ class Todo:
                  steps: list[TodoStep] | None = None,
                  deadline: datetime | None = None,
                  repeat_mode: str | None = None,
-                 assign_to: str | None = None):
+                 assign_to: str | None = None) -> None:
         self.title: str = title
         self.is_completed: bool = is_completed
         self.is_favorite: bool = is_favorite
@@ -29,5 +29,5 @@ class Todo:
         self.repeat_mode: str | None = repeat_mode
         self.assign_to: str | None = assign_to
 
-    def display(self):
+    def display(self) -> None:
         print(f"{self.title}")

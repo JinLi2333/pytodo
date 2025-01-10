@@ -14,14 +14,14 @@ class User:
     password: str
     last_login: datetime = datetime.min
 
-    def check_credential(self):
+    def check_credential(self) -> None:
         # check if last login time is more than 1 hour ago
         if self.last_login < datetime.now() - TIME_THRESHOLD:
             self.login()
         else:
             print("you are already logged in")
 
-    def login(self):
+    def login(self) -> None:
         for _ in range(RETRY_TIME):
             password = input("type your password and press ENTER\n")
             if password == self.password:

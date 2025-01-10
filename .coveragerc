@@ -1,0 +1,5 @@
+source = 
+    ./src
+
+[report] 
+include_namespace_packages = True

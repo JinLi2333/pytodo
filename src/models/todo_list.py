@@ -1,4 +1,4 @@
-from todo import Todo
+from models.todo import Todo
 
 
 class TodoList:
